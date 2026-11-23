@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cookie және құпиялылық</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><h1>Cookie және пайдаланушы деректерінің құпиялылығы</h1><p>№17 СРСП тақырыбына арналған оқу демо-қосымшасы</p></header>
+<main>
+  <section class="card login-card">
+    <h2>Қолданушы кабинеті</h2>
+    <p id="loginStatus" role="status">Күйі тексеріліп жатыр…</p>
+    <form id="loginForm">
+      <label>Логин<input name="username" autocomplete="username" required></label>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Кіру</button>
+    </form>
+    <button id="logoutButton" class="secondary hidden" type="button">Шығу</button>
+    <p class="demo-hint">Демо логин: <b>student</b>, пароль: <b>Cookie2026!</b></p>
+  </section>
+
+  <section class="card"><h2>Cookie дегеніміз не?</h2><p>Cookie — браузер сайтқа қайта кіргенде серверге жіберетін шағын мәтіндік дерек. Бұл демо тек қажетті cookie-ді және пайдаланушы рұқсат еткен жағдайда ғана аналитикалық cookie-ді қолданады.</p><ul><li><b>Қажетті:</b> негізгі функциялар.</li><li><b>Преференциялық:</b> тіл және көрініс таңдауы.</li><li><b>Аналитикалық:</b> сайт қолданылуын өлшеу.</li><li><b>Маркетингтік:</b> жарнаманы сәйкестендіру.</li></ul><p>Cookie сонымен бірге first-party/third-party, session/persistent, HttpOnly/Secure сияқты белгілерімен жіктеледі.</p></section>
+  <section class="card"><h2>Қазіргі таңдауыңыз</h2><p id="status">Күйі тексеріліп жатыр…</p><button id="manage" type="button">Таңдауды өзгерту</button></section>
+  <section class="card"><h2>Құпиялылық туралы</h2><p>Демо логин серверлік сессияда сақталады, ал Tomcat сессияны JSESSIONID cookie арқылы байланыстырады. Логин дерегі үшінші тарапқа жіберілмейді. Cookie келісім таңдауы HttpOnly cookie ретінде сақталады; аналитикалық cookie тек келісім берілгенде қосылады.</p></section>
+</main>
+<div id="shade" class="shade hidden"></div>
+<section id="banner" class="banner hidden" role="dialog" aria-modal="true" aria-labelledby="banner-title"><h2 id="banner-title">Cookie таңдауы</h2><p>Қажетті cookie сайт жұмысы үшін қолданылады. Аналитикалық cookie міндетті емес.</p><label class="choice"><input type="checkbox" checked disabled> Қажетті cookie <small>Әрқашан қосулы</small></label><label class="choice"><input id="analytics" type="checkbox"> Аналитикалық cookie <small>Қалауыңыз бойынша</small></label><div class="buttons"><button id="reject" class="secondary" type="button">Бас тарту</button><button id="save" class="secondary" type="button">Таңдауды сақтау</button><button id="accept" type="button">Барлығына рұқсат беру</button></div></section>
+<footer>Оқу мақсатындағы үлгі. Нақты жобада cookie мақсатын және сақтау мерзімін құпиялылық саясатында көрсетіңіз.</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
+
